@@ -1,0 +1,53 @@
+Objetivo
+Hoy hablaremos sobre tipos de datos. ¡Revisa la pestaña del Tutorial para ver los materiales de aprendizaje y un video instructivo!
+
+Tarea
+Completa el código en el editor de abajo. Las variables ya están declaradas e inicializadas por ti. Debes:
+
+Declarar tus variables: una de tipo int, una de tipo double y una de tipo String.
+
+Leer las líneas de entrada desde el stdin (de acuerdo con la secuencia dada en la sección de Formato de Entrada de abajo) e inicializar tus variables.
+
+Utilizar el operador correspondiente para realizar las siguientes operaciones:
+
+Imprimir la suma de la variable int inicial más tu variable int en una nueva línea.
+
+Imprimir la suma de la variable double inicial más tu variable double redondeada a un decimal en una nueva línea.
+
+Concatenar la variable String inicial con el texto que leíste como entrada e imprimir el resultado en una nueva línea.
+
+Nota: Si estás usando un lenguaje que no admite el uso del operador correspondiente para la concatenación de cadenas (por ejemplo: C), puedes simplemente imprimir una variable inmediatamente después de la otra en la misma línea. La cadena proporcionada en tu editor debe imprimirse primero, seguida inmediatamente por la cadena que leíste como entrada.
+
+Formato de Entrada
+
+La primera línea contiene un entero que debes sumar.
+
+La segunda línea contiene un double que debes sumar.
+
+La tercera línea contiene una cadena de texto (string) que debes concatenar.
+
+Formato de Salida
+Imprime la suma de ambos enteros en la primera línea, la suma de ambos doubles (redondeada a 1 decimal) en la segunda línea, y luego las dos cadenas concatenadas en la tercera línea.
+
+Entrada de Ejemplo (Sample Input)
+
+Plaintext
+12
+4.0
+is the best place to learn and practice coding!
+Salida de Ejemplo (Sample Output)
+
+Plaintext
+16
+8.0
+HackerRank is the best place to learn and practice coding!
+
+Explicación
+
+Al sumar los enteros obtenemos el entero 16.
+
+Al sumar los números de punto flotante (doubles) obtenemos 8.0.
+
+Al concatenar "HackerRank " con "is the best place to learn and practice coding!", obtenemos "HackerRank is the best place to learn and practice coding!".
+
+No pasarás este desafío si intentas asignar los valores del caso de ejemplo directamente a tus variables en lugar de seguir las instrucciones anteriores y leer la entrada desde el stdin.
