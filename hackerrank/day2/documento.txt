@@ -1,0 +1,268 @@
+traduceme esto Objective
+In this challenge, you will work with arithmetic operators. Check out the [Tutorial](https://www.hackerrank.com/challenges/30-operators/tutorial) tab for learning materials and an instructional video.
+Task
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+Example
+
+A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value and return from the function.
+Function Description
+Complete the solve function in the editor below.
+solve has the following parameters:
+
+int meal_cost: the cost of food before tip and tax
+int tip_percent: the tip percentage
+int tax_percent: the tax percentage Returns The function returns nothing. Print the calculated value, rounded to the nearest integer. Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result. Input Format There are lines of numeric input: The first line has a double, (the cost of the meal before tax and tip). The second line has an integer, (the percentage of being added as tip). The third line has an integer, (the percentage of being added as tax). Sample Input
+12.00
+20
+8
+Sample Output
+
+15
+Explanation
+Given:
+, ,
+Calculations:
+
+We round to the nearest integer and print the result, .
+
+Mostrar más
+
+Preparó traducción de desafío de programación
+Preparó traducción de desafío de programación
+Aquí tienes la traducción:
+
+Objetivo
+En este desafío, trabajarás con operadores aritméticos. Consulta la pestaña de Tutorial para material de aprendizaje y un video instructivo.
+
+Tarea
+Dado el precio de la comida (costo base de una comida), el porcentaje de propina (el porcentaje del precio de la comida que se agrega como propina) y el porcentaje de impuesto (el porcentaje del precio de la comida que se agrega como impuesto) para una comida, encuentra e imprime el costo total de la comida. Redondea el resultado al entero más cercano.
+
+Ejemplo
+
+Una propina del 15% * 100 = 15, y los impuestos son 8% * 100 = 8. Imprime el valor y regresa desde la función.
+
+Descripción de la función
+Completa la función solve en el editor a continuación.
+
+solve tiene los siguientes parámetros:
+
+int meal_cost: el costo de la comida antes de la propina y el impuesto
+int tip_percent: el porcentaje de propina
+int tax_percent: el porcentaje de impuesto
+Retorna
+La función no retorna nada. Imprime el valor calculado, redondeado al entero más cercano.
+
+Nota: Asegúrate de usar valores precisos para tus cálculos, o podrías terminar con un resultado redondeado incorrectamente.
+
+Formato de entrada
+Hay líneas de entrada numérica:
+La primera línea tiene un valor double (el costo de la comida antes del impuesto y la propina).
+La segunda línea tiene un entero (el porcentaje que se agrega como propina).
+La tercera línea tiene un entero (el porcentaje que se agrega como impuesto).
+
+Entrada de ejemplo
+
+12.00
+20
+8
+Salida de ejemplo
+
+15
+Explicación
+Dado los valores de entrada, se realizan los cálculos correspondientes. Redondeamos al entero más cercano e imprimimos el resultado.
+
+resolver    
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'solve' function below.
+#
+# The function accepts following parameters:
+#  1. DOUBLE meal_cost
+#  2. INTEGER tip_percent
+#  3. INTEGER tax_percent
+#
+
+def solve(meal_cost, tip_percent, tax_percent):
+    # Write your code here
+
+if __name__ == '__main__':
+    meal_cost = float(input().strip())
+
+    tip_percent = int(input().strip())
+
+    tax_percent = int(input().strip())
+
+    solve(meal_cost, tip_percent, tax_percent)
+Mostrar más
+Aquí está la solución:
+
+python
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'solve' function below.
+#
+# The function accepts following parameters:
+#  1. DOUBLE meal_cost
+#  2. INTEGER tip_percent
+#  3. INTEGER tax_percent
+#
+
+def solve(meal_cost, tip_percent, tax_percent):
+    tip = meal_cost * (tip_percent / 100)
+    tax = meal_cost * (tax_percent / 100)
+    total_cost = meal_cost + tip + tax
+    print(round(total_cost))
+
+if __name__ == '__main__':
+    meal_cost = float(input().strip())
+
+    tip_percent = int(input().strip())
+
+    tax_percent = int(input().strip())
+
+    solve(meal_cost, tip_percent, tax_percent)
+Explicación:
+
+Se calcula la propina (tip) multiplicando meal_cost por el porcentaje de propina dividido entre 100.
+Se calcula el impuesto (tax) de la misma manera, usando tax_percent.
+Se suman meal_cost + tip + tax para obtener el costo total.
+Se usa round() para redondear al entero más cercano antes de imprimir.
+Verificación con el ejemplo:
+
+meal_cost = 12.00, tip_percent = 20, tax_percent = 8
+tip = 12.00 * 0.20 = 2.4
+tax = 12.00 * 0.08 = 0.96
+total = 12.00 + 2.4 + 0.96 = 15.36
+round(15.36) = 15 ✅ Coincide con la salida esperada.
+me dio este error  Traceback (most recent call last):
+
+File "/tmp/submission/20260713/23/44/hackerrank-6598334941fde878c021635ee3bbd28e/code/Solution.py", line 32, in <module>
+    solve(meal_cost, tip_percent, tax_percent)
+  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/submission/20260713/23/44/hackerrank-6598334941fde878c021635ee3bbd28e/code/Solution.py", line 22, in solve
+  total_cost = meal_cost + tip + tax
+                                   ^^^
+NameError: name 'tax' is not defined. Did you mean: 'max'?
+Mostrar más
+
+Identificó problema de indentación y preparó corrección
+Identificó problema de indentación y preparó corrección
+Ese error indica que la línea donde calculas tax no se ejecutó correctamente (probablemente un problema de indentación al copiar el código, o se borró esa línea sin querer).
+
+Verifica que tu función tenga exactamente estas 4 líneas, todas con la misma indentación (4 espacios) dentro de solve:
+
+python
+def solve(meal_cost, tip_percent, tax_percent):
+    tip = meal_cost * (tip_percent / 100)
+    tax = meal_cost * (tax_percent / 100)
+    total_cost = meal_cost + tip + tax
+    print(round(total_cost))
+Causas comunes de este error:
+
+Falta la línea de tax o se escribió mal el nombre de la variable (por ejemplo Tax con mayúscula, o tax_percent en vez de tax).
+Indentación inconsistente: si mezclaste tabs y espacios, Python a veces no toma la línea como parte del bloque de la función.
+Copia y pega el código completo tal cual está aquí abajo, respetando la indentación:
+
+python
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def solve(meal_cost, tip_percent, tax_percent):
+    tip = meal_cost * (tip_percent / 100)
+    tax = meal_cost * (tax_percent / 100)
+    total_cost = meal_cost + tip + tax
+    print(round(total_cost))
+
+if __name__ == '__main__':
+    meal_cost = float(input().strip())
+
+    tip_percent = int(input().strip())
+
+    tax_percent = int(input().strip())
+
+    solve(meal_cost, tip_percent, tax_percent)
+Si vuelve a fallar, revisa en el editor de HackerRank que no haya una línea en blanco con espacios raros justo antes de tax = ..., ya que eso puede romper el bloque de indentación en Python.
+
+traducemelo      Objective
+In this challenge, you will work with arithmetic operators. Check out the [Tutorial](https://www.hackerrank.com/challenges/30-operators/tutorial) tab for learning materials and an instructional video.
+Task
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+Example
+
+A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value and return from the function.
+Function Description
+Complete the solve function in the editor below.
+solve has the following parameters:
+
+int meal_cost: the cost of food before tip and tax
+int tip_percent: the tip percentage
+int tax_percent: the tax percentage Returns The function returns nothing. Print the calculated value, rounded to the nearest integer. Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result. Input Format There are lines of numeric input: The first line has a double, (the cost of the meal before tax and tip). The second line has an integer, (the percentage of being added as tip). The third line has an integer, (the percentage of being added as tax). Sample Input
+12.00
+20
+8
+Sample Output
+
+15
+Explanation
+Given:
+, ,
+Calculations:
+
+We round to the nearest integer and print the result, .
+
+Mostrar más
+Objetivo
+En este desafío, trabajarás con operadores aritméticos. Consulta la pestaña de Tutorial para material de aprendizaje y un video instructivo.
+
+Tarea
+Dado el precio de la comida (costo base de una comida), el porcentaje de propina (el porcentaje del precio de la comida que se agrega como propina) y el porcentaje de impuesto (el porcentaje del precio de la comida que se agrega como impuesto) para una comida, encuentra e imprime el costo total de la comida. Redondea el resultado al entero más cercano.
+
+Ejemplo
+
+Una propina del 15% * 100 = 15, y los impuestos son 8% * 100 = 8. Imprime el valor y regresa desde la función.
+
+Descripción de la función
+Completa la función solve en el editor a continuación.
+
+solve tiene los siguientes parámetros:
+
+int meal_cost: el costo de la comida antes de la propina y el impuesto
+int tip_percent: el porcentaje de propina
+int tax_percent: el porcentaje de impuesto
+
+Retorna
+La función no retorna nada. Imprime el valor calculado, redondeado al entero más cercano.
+Nota: Asegúrate de usar valores precisos para tus cálculos, o podrías terminar con un resultado redondeado incorrectamente.
+Formato de entrada
+Hay líneas de entrada numérica:
+La primera línea tiene un valor double (el costo de la comida antes del impuesto y la propina).
+La segunda línea tiene un entero (el porcentaje que se agrega como propina).
+La tercera línea tiene un entero (el porcentaje que se agrega como impuesto).
+Entrada de ejemplo
+12.00
+20
+8
+Salida de ejemplo
+15
+Explicación
+Dados los valores de entrada, se realizan los cálculos correspondientes. Redondeamos al entero más cercano e imprimimos el resultado.
