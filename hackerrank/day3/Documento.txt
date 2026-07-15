@@ -1,0 +1,48 @@
+Objetivo
+En este desafío, aprenderemos sobre sentencias condicionales. Revisa la pestaña Tutorial para ver materiales de aprendizaje y un video instructivo.
+
+Tarea
+Dado un entero, , realiza las siguientes acciones condicionales:
+
+Si es impar, imprime Weird
+
+Si es par y está en el rango inclusivo de a , imprime Not Weird
+
+Si es par y está en el rango inclusivo de a , imprime Weird
+
+Si es par y es mayor que , imprime Not Weird
+
+Completa el código base proporcionado en tu editor para imprimir si es o no weird (raro).
+
+Formato de Entrada
+Una sola línea que contiene un entero positivo, .
+
+Restricciones
+
+Formato de Salida
+Imprime Weird si el número es weird; de lo contrario, imprime Not Weird.
+
+Entrada de Muestra 0
+
+Plaintext
+3
+Salida de Muestra 0
+
+Plaintext
+Weird
+Entrada de Muestra 1
+
+Plaintext
+24
+Salida de Muestra 1
+
+Plaintext
+Not Weird
+
+Explicación
+
+Caso de Muestra 0:
+es impar y los números impares son weird, por lo que imprimimos Weird.
+
+Caso de Muestra 1:
+y  es par, por lo que no es weird. Por lo tanto, imprimimos Not Weird.
