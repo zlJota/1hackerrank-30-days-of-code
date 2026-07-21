@@ -1,0 +1,30 @@
+Objetivo
+
+Hoy trabajaremos con números binarios. Consulta la pestaña Tutorial para obtener materiales de aprendizaje y un video instructivo.
+
+TareaDado un entero en base 10, $n$, conviértelo a binario (base 2). Luego, encuentra e imprime el entero en base 10 que representa la cantidad máxima de $1$s consecutivos en la representación binaria de $n$. Al trabajar con diferentes bases, es común mostrar la base como un subíndice.
+
+Ejemplo$n = 125$La representación binaria de $125_{10}$ es $1111101_2$. En base 10, hay grupos de $5$ y $1$ unos consecutivos. Imprime el máximo, $5$.
+
+Formato de entradaUn solo entero, $n$.Restricciones
+
+$1 \le n \le 10^6$Formato de salidaImprime un solo entero en base 10 que represente el número máximo de $1$s consecutivos en la representación binaria de $n$.Entrada de muestra 1
+
+Plaintext
+5
+Salida de muestra 1
+
+Plaintext
+1
+Entrada de muestra 2
+
+Plaintext
+13
+Salida de muestra 2
+
+Plaintext
+2
+
+ExplicaciónCaso de muestra 1:La representación binaria de $5_{10}$ es $101_2$, por lo que el número máximo de $1$s consecutivos es $1$.
+
+Caso de muestra 2:La representación binaria de $13_{10}$ es $1101_2$, por lo que el número máximo de $1$s consecutivos es $2$.

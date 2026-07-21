@@ -1,0 +1,21 @@
+Objetivo
+
+Hoy aprenderemos sobre la estructura de datos Array (arreglo). Consulta la pestaña Tutorial para obtener materiales de aprendizaje y un video instructivo
+
+TareaDado un arreglo, $A$, de $N$ enteros, imprime los elementos de $A$ en orden inverso como una sola línea de números separados por espacios.
+
+Ejemplo$A = [1, 2, 3, 4]$Imprime 4 3 2 1. Cada entero está separado por un espacio.Formato de entrada
+
+La primera línea contiene un entero, $N$ (el tamaño de nuestro arreglo).La segunda línea contiene $N$ enteros separados por espacios que describen los elementos del arreglo $A$.Restricciones
+
+$1 \le N \le 1000$$1 \le A[i] \le 10000$, donde $A[i]$ es el $i$-ésimo entero en el arreglo.
+
+Formato de salidaImprime los elementos del arreglo $A$ en orden inverso como una sola línea de números separados por espacios.Entrada de muestra
+
+Plaintext
+4
+1 4 3 2
+Salida de muestra
+
+Plaintext
+2 3 4 1

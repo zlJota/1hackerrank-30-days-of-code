@@ -1,0 +1,56 @@
+**Objetivo**
+
+Hoy discutiremos sobre el ámbito de las variables (*Scope*). Consulta la pestaña Tutorial para obtener materiales de aprendizaje y un video instructivo.
+
+La diferencia absoluta entre dos enteros, $a$ y $b$, se escribe como $\vert{}a - b\vert{}$. La diferencia absoluta máxima entre dos enteros en un conjunto de enteros positivos, $elements$, es la diferencia absoluta más grande entre cualquier par de enteros en $elements$.
+
+La clase `Difference` ya está iniciada para ti en el editor. Tiene un arreglo de enteros privado (`__elements`) para almacenar $N$ enteros no negativos, y un entero público (`maximumDifference`) para almacenar la diferencia absoluta máxima.
+
+**Tarea**
+
+Completa la clase `Difference` escribiendo lo siguiente:
+
+1. Un constructor de la clase que tome un arreglo de enteros como parámetro y lo guarde en la variable de instancia `__elements`.
+2. Un método `computeDifference` que encuentre la diferencia absoluta máxima entre cualquiera dos números en `__elements` y la guarde en la variable de instancia `maximumDifference`.
+
+**Formato de entrada**
+
+No eres responsable de leer ninguna entrada desde la entrada estándar (`stdin`). La clase `Solution` en el editor lee las líneas de entrada. La primera línea contiene $N$, el tamaño del arreglo `__elements`. La segunda línea contiene $N$ enteros separados por espacios que describen el arreglo `__elements`.
+
+**Restricciones**
+
+* $1 \le N \le 100$
+* $1 \le __elements[i] \le 100$, donde $0 \le i \le N - 1$
+
+**Formato de salida**
+
+No eres responsable de imprimir ninguna salida; la clase `Solution` imprimirá el valor de la variable de instancia `maximumDifference`.
+
+**Entrada de muestra**
+
+```text
+STDIN   Función
+-----   --------
+3       Tamaño de __elements[] N = 3
+1 2 5   __elements = [1, 2, 5]
+
+```
+
+**Salida de muestra**
+
+```text
+4
+
+```
+
+**Explicación**
+
+El ámbito (*scope*) del arreglo `__elements` y del entero `maximumDifference` abarca toda la instancia de la clase. El constructor de la clase guarda el argumento pasado como la variable de instancia `__elements` (a la cual el método `computeDifference` puede acceder).
+
+Para encontrar la diferencia máxima, `computeDifference` evalúa cada elemento en el arreglo y encuentra la diferencia máxima entre cualquier par de elementos:
+
+* $\vert{}1 - 2\vert{} = 1$
+* $\vert{}1 - 5\vert{} = 4$
+* $\vert{}2 - 5\vert{} = 3$
+
+El máximo de estas diferencias es $4$, por lo que guarda el valor $4$ en la variable de instancia `maximumDifference`. Luego, el código predefinido en el editor imprime el valor almacenado en `maximumDifference`, el cual es $4$.

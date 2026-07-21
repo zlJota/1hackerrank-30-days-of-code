@@ -1,0 +1,55 @@
+Objetivo
+
+Hoy profundizaremos en nuestro conocimiento sobre arreglos agregando otra dimensión. Consulta la pestaña Tutorial para obtener materiales de aprendizaje y un video instructivo.
+
+ContextoDado un arreglo bidimensional (2D) de $6 \times 6$, $A$:Plaintext1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+
+Definimos un reloj de arena (hourglass) en $A$ como un subconjunto de valores con índices que siguen este patrón en la representación gráfica de $A$:
+
+Plaintext
+a b c
+  d
+e f g
+
+Hay $16$ relojes de arena en $A$, y la suma de un reloj de arena es la suma de los valores que lo componen.
+
+TareaCalcula la suma de cada reloj de arena en $A$ e imprime la suma máxima encontrada.
+
+EjemploEn el arreglo mostrado anteriormente, la suma máxima de un reloj de arena es $7$, correspondiente al reloj de arena ubicado en la esquina superior izquierda.
+
+Formato de entradaHay $6$ líneas de entrada, donde cada línea contiene $6$ enteros separados por espacios que describen el arreglo 2D $A$.
+
+Restricciones$-9 \le A[i][j] \le 9$$0 \le i, j \le 5$
+
+Formato de salidaImprime la suma máxima de los relojes de arena en $A$.Entrada de muestra
+
+Plaintext1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+Salida de muestraPlaintext19
+Explicación$A$ contiene los siguientes relojes de arena:Plaintext1 1 1   1 1 0   1 0 0   0 0 0
+  1       0       0       0
+1 1 1   1 1 0   1 0 0   0 0 0
+
+0 1 0   1 0 0   0 0 0   0 0 0
+  1       1       0       0
+0 0 2   0 2 4   2 4 4   4 4 0
+
+1 1 1   1 1 0   1 0 0   0 0 0
+  0       2       4       4
+0 0 0   0 0 2   0 2 0   2 0 0
+
+0 0 2   0 2 4   2 4 4   4 4 0
+  0       0       2       0
+0 0 1   0 1 2   1 2 4   2 4 0
+El reloj de arena con la suma máxima ($19$) es:Plaintext2 4 4
+  2
+1 2 4

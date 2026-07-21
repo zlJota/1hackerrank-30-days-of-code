@@ -1,0 +1,14 @@
+ObjetivoHoy aprenderemos sobre un concepto algorítmico llamado recursividad (recursión). Consulta la pestaña Tutorial para obtener materiales de aprendizaje y un video instructivo.Método recursivo para calcular el factorial$$\begin{aligned} \text{factorial}(n) = \begin{cases} 1 & \text{si } n \le 1 \\ n \times \text{factorial}(n - 1) & \text{de lo contrario} \end{cases} \end{aligned}$$
+
+Descripción de la función
+
+Completa la función factorial en el editor a continuación. Asegúrate de utilizar recursividad.
+
+factorial tiene el siguiente parámetro:
+
+int n: un entero
+
+Devuelveint: el factorial de $n$Nota: Si no utilizas recursividad o si no nombras tu función recursiva factorial o Factorial, obtendrás una puntuación de 0.Formato de entradaUn solo entero, $n$ (el argumento que se pasará a factorial).
+
+Restricciones$2 \le n \le 12$Tu entrega debe contener una función recursiva llamada factorial.Entrada de muestraPlaintext3
+Salida de muestra

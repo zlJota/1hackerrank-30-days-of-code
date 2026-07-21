@@ -1,0 +1,62 @@
+**Objetivo**
+
+Hoy extenderemos lo que aprendimos ayer sobre Herencia aplicándolo a Clases Abstractas. Como este es un concepto muy específico de la Programación Orientada a Objetos, las entregas están limitadas a los lenguajes que utilizan esta construcción. Consulta la pestaña Tutorial para obtener materiales de aprendizaje y un video instructivo.
+
+**Tarea**
+
+Dadas una clase `Book` y una clase `Solution`, escribe una clase `MyBook` que haga lo siguiente:
+
+1. Herede de `Book`.
+2. Tenga un constructor parametrizado que reciba estos $3$ parámetros:
+* `string title` (título)
+* `string author` (autor)
+* `int price` (precio)
+
+
+3. Implemente el método abstracto `display()` de la clase `Book` para que imprima estas $3$ líneas:
+* `Title:`, un espacio y luego el `title` de la instancia actual.
+* `Author:`, un espacio y luego el `author` de la instancia actual.
+* `Price:`, un espacio y luego el `price` de la instancia actual.
+
+
+
+*Nota: Debido a que estas clases se escriben en el mismo archivo, no debes usar un modificador de acceso (por ejemplo: `public`) al declarar `MyBook`, o tu código no se ejecutará.*
+
+**Formato de entrada**
+
+No eres responsable de leer ninguna entrada desde la entrada estándar (`stdin`). La clase `Solution` crea un objeto de `Book` y llama al constructor de la clase `MyBook` (pasándole los argumentos necesarios). Luego llama al método `display()` en el objeto `Book`.
+
+**Formato de salida**
+
+El método `display()` debe imprimir y etiquetar el `title`, `author` y `price` respectivos de la instancia del objeto `MyBook` (con cada valor en su propia línea) de la siguiente manera:
+
+```text
+Title: $title
+Author: $author
+Price: $price
+
+```
+
+*Nota: El símbolo `$` antepuesto a los nombres de las variables indica que son marcadores de posición para los valores reales.*
+
+**Entrada de muestra**
+
+El código predefinido (*stub code*) en el editor maneja la siguiente entrada desde `stdin`:
+
+```text
+The Alchemist
+Paulo Coelho
+248
+
+```
+
+**Salida de muestra**
+
+Tu método `display()` debe imprimir la siguiente salida:
+
+```text
+Title: The Alchemist
+Author: Paulo Coelho
+Price: 248
+
+```
